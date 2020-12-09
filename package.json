@@ -1,0 +1,9 @@
+{
+  "name": "random-choices",
+  "version": "0.0.0",
+  "description": "RandomChoices",
+  "main": "server.js",
+  "author": {
+    "name": "Eric O'Brien"
+  }
+}
