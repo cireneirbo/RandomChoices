@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+    text-align: center;
+    background-image: url("./images/nedulon.png");
+    background-size: auto;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-logo {
@@ -14,14 +24,24 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-fieldset {
+    border: 5px solid rgb(0, 0, 0);
+    background: #ddd;
+    border-radius: 5px;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: white;
+    opacity: 0.75;
+    text-align: center;
 }
 
 .App-link {
@@ -35,4 +55,55 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-footer {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+body {
+    /*background-image: url("./images/nedulon.png");
+    background-size: auto;
+    background-attachment: fixed;*/
+}
+
+input {
+    color: black;
+}
+
+label {
+    color: black;
+}
+
+#new-password {
+    color: black;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 14em;
+    word-wrap: break-word;
+    color: black;
+}
+
+fieldset {
+    border: 5px solid rgb(0, 0, 0);
+    background: #ddd;
+    border-radius: 5px;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: white;
+    opacity: 0.75;
+    text-align: center;
+}
+
+main {
+    padding-left: 30%;
+    padding-right: 30%;
 }
