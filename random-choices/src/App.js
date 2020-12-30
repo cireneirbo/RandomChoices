@@ -26,8 +26,6 @@ function App() {
             <fieldset className="App-fieldset">
                 <p id="i-was-here">Created by <a href="https://github.com/cireneirbo">Eric O&apos;Brien</a></p>
             </fieldset>
-                <br />
-                <br />
         </body>
         <footer className="App-footer">
         </footer>
