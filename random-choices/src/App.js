@@ -8,7 +8,7 @@ function App() {
         <body className="App-body">
             <fieldset className="App-fieldset">
                 <div>Add a new activity: </div>
-                <input id="input-activity" placeholder="type an activity" value="" />
+                <input id="input-activity" placeholder="add an activity" value="" />
                 <button id="create-activity">Create a new activity</button>
             </fieldset>
                 <br />
@@ -24,7 +24,7 @@ function App() {
             </fieldset>
                 <br />
             <fieldset className="App-fieldset">
-                <p id="i-was-here">Created by <a href="https://github.com/cireneirbo">Eric O&apos;Brien</a></p>
+                <p id="i-was-here">Created by <a href="https://github.com/cireneirbo">cireneirbo</a></p>
             </fieldset>
         </body>
         <footer className="App-footer">
