@@ -1,6 +1,11 @@
 import './App.css';
 
 function App() {
+    addActivity(event) {
+        this.setState({
+            //add to array
+        })
+    }
   return (
     <div className="App">
       <header className="App-header">
@@ -9,7 +14,7 @@ function App() {
             <fieldset className="App-fieldset">
                 <div>Add a new activity: </div>
                 <input id="input-activity" placeholder="add an activity" value="" />
-                <button id="create-activity">Create a new activity</button>
+                <button id="create-activity" onClick="this.addActivity">Create a new activity</button>
             </fieldset>
                 <br />
             <fieldset className="App-fieldset">
