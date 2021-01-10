@@ -1,9 +1,19 @@
+import React, { Component } from 'react';
 import './App.css';
 
 function App() {
-    addActivity(event) {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activities: []
+        };
+
+        this.addActivity = this.addActivity.bind(this);
+    }
+
+    addActivity(event){
         this.setState({
-            //add to array
+            [target.name]: target.value
         });
     }
   return (
@@ -13,8 +23,8 @@ function App() {
         <body className="App-body">
             <fieldset className="App-fieldset">
                 <div>Add a new activity: </div>
-                <input id="input-activity" placeholder="add an activity" value="" />
-                  <button id="create-activity" onClick={this.addActivity}>Create a new activity</button>
+                  <input id="input-activity" placeholder="add an activity" name={this.activities} value="" />
+                  <button id="create-activity" onSubmit={this.addActivity}>Create a new activity</button>
             </fieldset>
                 <br />
             <fieldset className="App-fieldset">
@@ -33,9 +43,19 @@ function App() {
             </fieldset>
         </body>
         <footer className="App-footer">
+              <ul>
+                  {activities.map((activity) => (
+                      <Activity name={activity} />
+                  ))}
+              </ul>
         </footer>
     </div>
   );
+}
+
+function Activity({ name }) {
+    // we access the 'name' prop directly using object destructuring
+    return <p>This person's name is: {name}</p>;
 }
 
 export default App;
