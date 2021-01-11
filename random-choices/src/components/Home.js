@@ -6,17 +6,25 @@ export class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activities: []
+            activities: [],
+            preparedActivity: ""
         };
 
         this.addActivity = this.addActivity.bind(this);
+        this.prepareActivity = this.prepareActivity.bind(this);
     }
 
-    addActivity(event) {
+    prepareActivity(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        }, console.log(this.activities));
+    }
+
+    /*addActivity(event) {
         this.setState({
             [event.target.name]: event.target.value
         });
-    }
+    }*/
 
     render() {
         return (
@@ -26,7 +34,7 @@ export class Home extends Component {
                 <body className="App-body">
                     <fieldset className="App-fieldset">
                         <div>Add a new activity: </div>
-                        <input id="input-activity" type="text" placeholder="add an activity" name={this.activities} value="" />
+                        <input id="input-activity" type="text" placeholder="add an activity" onChange={this.prepareActivity} name={this.prepareActivity} value="" />
                         <button id="create-activity" onSubmit={this.addActivity}>Create a new activity</button>
                     </fieldset>
                     <br />
