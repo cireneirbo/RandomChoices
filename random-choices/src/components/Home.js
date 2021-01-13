@@ -17,7 +17,7 @@ export class Home extends Component {
     prepareActivity(event) {
         this.setState({
             [event.target.name]: event.target.value
-        }, console.log(this.activities));
+        }, console.log(this.preparedActivity));
     }
 
     addActivity(event) {
@@ -50,6 +50,7 @@ export class Home extends Component {
                     <p id="i-was-here">Created by <a href="https://github.com/cireneirbo">cireneirbo</a></p>
                 </fieldset>
                 <p>{this.activities}</p>
+                <p>{this.preparedActivity}</p>
                 {/*this.activities.map((activity) => (
                     <ul>
                         {activity}
