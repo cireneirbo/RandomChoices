@@ -18,7 +18,7 @@ export class Home extends Component {
 
     prepareActivity(event) {
         this.setState({
-            [event.target.name]: event.target.value
+            preparedActivity: event.target.value
         }, console.log(this.preparedActivity));
     }
 
@@ -28,7 +28,7 @@ export class Home extends Component {
         });
     }
 
-    showActivity(event) {
+    showActivity() {
         if (this.activities.length > 0) {
             this.setState({
                 preparedActivity: this.activities[this.getRandomInt(this.activities.length)]
