@@ -12,6 +12,8 @@ export class Home extends Component {
 
         this.addActivity = this.addActivity.bind(this);
         this.prepareActivity = this.prepareActivity.bind(this);
+        this.showActivity = this.showActivity.bind(this);
+        this.getRandomInt = this.getRandomInt.bind(this);
     }
 
     prepareActivity(event) {
@@ -22,8 +24,24 @@ export class Home extends Component {
 
     addActivity(event) {
         this.setState({
-            //[event.target.name]: event.target.value
+            [event.target.name]: event.target.value
         });
+    }
+
+    showActivity(event) {
+        if (this.activities.length > 0) {
+            this.setState({
+                preparedActivity: this.activities[this.getRandomInt(this.activities.length)]
+            });
+        } else {
+            this.setState({
+                preparedActivity: '??????'
+            });
+        }
+    }
+
+    getRandomInt(max) {
+        return (Math.floor(Math.random() * Math.floor(max)));
     }
 
     render() {
@@ -43,6 +61,7 @@ export class Home extends Component {
                 <fieldset className="App-fieldset">
                     <p id="new-activity" >
                         ???????
+                        {this.showActivity}
                     </p>
                 </fieldset>
                 <br />
