@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //the bricks for the wall
     const activityArray = [
-        "get drunk", "eat delicious food", "play some intense vidya", "work out", "go to sleep"
+        "eat delicious food", "play some intense vidya", "work out", "go to sleep"
     ];
 
     //selects a random activity
